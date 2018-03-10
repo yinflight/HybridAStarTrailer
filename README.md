@@ -14,6 +14,20 @@ I want to achieve this on autonomous vehicle.
 
 ![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation1.gif)
 
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation2.gif)
+
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation3.gif)
+
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation4.gif)
+
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation5.gif)
+
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation6.gif)
+
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation7.gif)
+
+
+
 
 # License 
 
