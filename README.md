@@ -1,4 +1,5 @@
 # HybridAStarTrailer
+
 A path planning algorithm based on Hybrid A\* for trailer truck
 
 # Goal
@@ -28,6 +29,8 @@ I want to achieve this on autonomous vehicle (click the image).
 
 # Requirements
 
+- [Julia 0.6](https://julialang.org/downloads/)
+
 - [PyPlot](https://github.com/JuliaPy/PyPlot.jl)
 
 - [DataFrames](https://github.com/JuliaData/DataFrames.jl)
@@ -38,6 +41,15 @@ I want to achieve this on autonomous vehicle (click the image).
 
 # How to use
 
+1. Install the required libraries.
+
+2. Clone this repo.
+
+3. Run the script like: julia main.jl
+
+4. Add star to this repo if you like it :smiley:. 
+
+# Algorithm
 
 # License 
 
