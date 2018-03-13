@@ -3,7 +3,7 @@ A path planning algorithm based on Hybrid A* for trailer truck
 
 # Goal
 
-I want to achieve this on autonomous vehicle.
+I want to achieve this on autonomous vehicle (click the image).
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jhhqkHsGrsA/0.jpg)](https://www.youtube.com/watch?v=jhhqkHsGrsA)
 
@@ -27,6 +27,15 @@ I want to achieve this on autonomous vehicle.
 ![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation7.gif)
 
 
+# Requirements
+
+- [JuliaPy/PyPlot\.jl: Plotting for Julia based on matplotlib\.pyplot](https://github.com/JuliaPy/PyPlot.jl)
+
+- DataFrames
+
+- NearestNeighbors
+
+- DataStructures 
 
 
 # License 
