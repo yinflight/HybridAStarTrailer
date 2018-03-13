@@ -4,7 +4,7 @@ A path planning algorithm based on Hybrid A\* for trailer truck
 
 # Goal
 
-I want to achieve this on autonomous vehicle (click the image).
+I want to achieve this on autonomous vehicle (click the image to see movie).
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jhhqkHsGrsA/0.jpg)](https://www.youtube.com/watch?v=jhhqkHsGrsA)
 
@@ -50,6 +50,12 @@ I want to achieve this on autonomous vehicle (click the image).
 4. Add star to this repo if you like it :smiley:. 
 
 # Algorithm
+
+## Vehicle Model
+
+- [13\.1\.2\.4 A car pulling trailers](http://planning.cs.uiuc.edu/node661.html#77556)
+
+## Hybrid A \* for trailer******
 
 # License 
 
