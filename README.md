@@ -1,5 +1,5 @@
 # HybridAStarTrailer
-A path planning algorithm based on Hybrid A* for trailer truck
+A path planning algorithm based on Hybrid A\* for trailer truck
 
 # Goal
 
@@ -10,7 +10,6 @@ I want to achieve this on autonomous vehicle (click the image).
 [Fedex truck amazing reverse parking \- YouTube](https://www.youtube.com/watch?v=jhhqkHsGrsA)
 
 # Simulation Examples
-
 
 ![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation1.gif)
 
@@ -29,13 +28,15 @@ I want to achieve this on autonomous vehicle (click the image).
 
 # Requirements
 
-- [JuliaPy/PyPlot\.jl: Plotting for Julia based on matplotlib\.pyplot](https://github.com/JuliaPy/PyPlot.jl)
+- [PyPlot](https://github.com/JuliaPy/PyPlot.jl)
 
-- DataFrames
+- [DataFrames](https://github.com/JuliaData/DataFrames.jl)
 
-- NearestNeighbors
+- [NearestNeighbors](https://github.com/KristofferC/NearestNeighbors.jl)
 
-- DataStructures 
+- [DataStructures](https://github.com/JuliaCollections/DataStructures.jl) 
+
+# How to use
 
 
 # License 
