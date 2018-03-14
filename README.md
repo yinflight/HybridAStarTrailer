@@ -51,9 +51,21 @@ I want to achieve this on autonomous vehicle (click the image to see movie).
 
 # Algorithm
 
+This algorithm is almost same as the original Hybrid A star algorithm.
+
+- [Practical Search Techniques in Path Planning for Autonomous Driving](https://ai.stanford.edu/~ddolgov/papers/dolgov_gpp_stair08.pdf)
+
+I will explain the some diffent parts of it.
+
 ## Vehicle Model
 
+This is the vehicle model which is used in this code.
+
 <img src="https://latex.codecogs.com/gif.latex?x&space;=&space;[x,y,\theta_0,\theta_1]\\&space;x_{t&plus;1}=x_t&plus;D\cos(\theta_t)\\&space;y_{t&plus;1}=y_t&plus;D\sin(\theta_t)\\&space;\theta_{0,t&plus;1}=\theta_{0,t}&plus;\frac{D}{L}\tan(\delta_t)\\&space;\theta_{1,t&plus;1}=\theta_{1,t}&plus;\frac{D}{d}\sin(\theta_{1,t}-\theta_{0,t})\\" title="x = [x,y,\theta_0,\theta_1]\\ x_{t+1}=x_t+D\cos(\theta_t)\\ y_{t+1}=y_t+D\sin(\theta_t)\\ \theta_{0,t+1}=\theta_{0,t}+\frac{D}{L}\tan(\delta_t)\\ \theta_{1,t+1}=\theta_{1,t}+\frac{D}{d}\sin(\theta_{1,t}-\theta_{0,t})\\" />
+
+x and y is a 2D position and θ0 and θ1 is the orientation of vehicle and trailer respectively.
+
+Ref:
 
 - [13\.1\.2\.4 A car pulling trailers](http://planning.cs.uiuc.edu/node661.html#77556)
 
