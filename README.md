@@ -55,7 +55,7 @@ I want to achieve this on autonomous vehicle (click the image to see movie).
 
 - [13\.1\.2\.4 A car pulling trailers](http://planning.cs.uiuc.edu/node661.html#77556)
 
-## Hybrid A \* for trailer******
+## Hybrid A \* for trailer
 
 # License 
 
