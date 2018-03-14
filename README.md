@@ -53,6 +53,8 @@ I want to achieve this on autonomous vehicle (click the image to see movie).
 
 ## Vehicle Model
 
+<img src="https://latex.codecogs.com/gif.latex?x&space;=&space;[x,y,\theta_0,\theta_1]\\&space;x_{t&plus;1}=x_t&plus;D\cos(\theta_t)\\&space;y_{t&plus;1}=y_t&plus;D\sin(\theta_t)\\&space;\theta_{0,t&plus;1}=\theta_{0,t}&plus;\frac{D}{L}\tan(\delta_t)\\&space;\theta_{1,t&plus;1}=\theta_{1,t}&plus;\frac{D}{d}\sin(\theta_{1,t}-\theta_{0,t})\\" title="x = [x,y,\theta_0,\theta_1]\\ x_{t+1}=x_t+D\cos(\theta_t)\\ y_{t+1}=y_t+D\sin(\theta_t)\\ \theta_{0,t+1}=\theta_{0,t}+\frac{D}{L}\tan(\delta_t)\\ \theta_{1,t+1}=\theta_{1,t}+\frac{D}{d}\sin(\theta_{1,t}-\theta_{0,t})\\" />
+
 - [13\.1\.2\.4 A car pulling trailers](http://planning.cs.uiuc.edu/node661.html#77556)
 
 ## Hybrid A \* for trailer
