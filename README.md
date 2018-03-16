@@ -1,6 +1,6 @@
 # HybridAStarTrailer
 
-A path planning algorithm based on Hybrid A\* for trailer truck
+A path planning algorithm based on Hybrid A\* for trailer truck.
 
 # Goal
 
@@ -75,11 +75,11 @@ Ref:
 
 This algorithm has 3 novelies for traier parking.
 
-- 1. 4D (x,y,θ0,θ1) gridding of Hybrid A \*.
+1. 4D (x,y,θ0,θ1) gridding of Hybrid A \*.
 
-- 2. Adding the Jackknif cost: Σ|θ0 - θ1|.
+2. Adding the Jackknif cost: Σ|θ0 - θ1|.
 
-- 3. Two rectangle (truck and trailer) collision check.
+3. Two rectangle (truck and trailer) collision check.
 
 
 # License 
