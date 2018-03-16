@@ -1,5 +1,7 @@
 # HybridAStarTrailer
 
+[![Build Status](https://travis-ci.org/AtsushiSakai/HybridAStarTrailer.svg?branch=master)](https://travis-ci.org/AtsushiSakai/HybridAStarTrailer)
+
 A path planning algorithm based on Hybrid A\* for trailer truck.
 
 # Goal
