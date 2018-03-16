@@ -6,4 +6,5 @@ os:
 julia:
   - 0.6.0
 
-julia -e 'Pkg.clone(pwd())'
+script:
+  - julia -e 'Pkg.clone(pwd())'
