@@ -8,6 +8,9 @@ julia:
 
 install:
   - julia -e 'Pkg.add("PyPlot")'
+  - julia -e 'Pkg.add("DataFrames")'
+  - julia -e 'Pkg.add("NearestNeighbors")'
+  - julia -e 'Pkg.add("DataStructures")'
 
 script:
   - julia ./test.jl
