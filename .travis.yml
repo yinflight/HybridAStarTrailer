@@ -7,4 +7,4 @@ julia:
   - 0.6.0
 
 script:
-  - julia -e 'Pkg.clone(pwd())'
+  - julia ./test.jl
