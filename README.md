@@ -1,4 +1,4 @@
-# HybridAStarTrailer
+# Hybrid AStar Trailer
 
 [![Build Status](https://travis-ci.org/AtsushiSakai/HybridAStarTrailer.svg?branch=master)](https://travis-ci.org/AtsushiSakai/HybridAStarTrailer)
 
@@ -13,6 +13,10 @@ I want to achieve this on autonomous vehicle (click the image to see movie).
 [Fedex truck amazing reverse parking \- YouTube](https://www.youtube.com/watch?v=jhhqkHsGrsA)
 
 # Simulation Examples
+
+These are simulation results for autonomous parking in a narrow space.
+
+It can generate a feasible path from differenct start states.
 
 ![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation1.gif)
 
