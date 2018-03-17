@@ -6,5 +6,8 @@ os:
 julia:
   - 0.6.0
 
+install:
+  - julia -e 'Pkg.add("PyPlot")'
+
 script:
   - julia ./test.jl
