@@ -7,11 +7,14 @@ julia:
   - 0.6.0
 
 install:
-  - julia -e 'Pkg.add("Conda");using Conda;Conda.add("matplotlib")'
+  - julia -e 'Pkg.add("Conda")'
+  - julia -e 'using Conda;Conda.add("matplotlib==2.0.1")'
+  - julia -e 'Pkg.add("PyCall")'
+  - julia -e 'ENV["PYTHON"]="";Pkg.build("PyCall")'
+  - julia -e 'Pkg.add("PyPlot")'
   - julia -e 'Pkg.add("DataFrames")'
   - julia -e 'Pkg.add("NearestNeighbors")'
   - julia -e 'Pkg.add("DataStructures")'
-  - julia -e 'Pkg.add("PyPlot")'
 
 script:
   - julia ./test.jl
