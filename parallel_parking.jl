@@ -56,49 +56,47 @@ function main()
     ooy = oy[:]
 
     # path generation
-    @time paths = trailer_hybrid_a_star.calc_hybrid_astar_path(sx, sy, syaw0, syaw1, gx, gy, gyaw0, gyaw1, ox, oy,
+    @time path = trailer_hybrid_a_star.calc_hybrid_astar_path(sx, sy, syaw0, syaw1, gx, gy, gyaw0, gyaw1, ox, oy,
                                                                trailer_hybrid_a_star.XY_GRID_RESOLUTION,
-                                                               trailer_hybrid_a_star.YAW_GRID_RESOLUTION,
-                                                               trailer_hybrid_a_star.N_PATHS_NEEDED)
+                                                               trailer_hybrid_a_star.YAW_GRID_RESOLUTION
+                                                               )
 
     # ====Animation=====
-    show_animation(paths, oox, ooy, sx, sy, syaw0, syaw1, gx, gy, gyaw0, gyaw1)
+    show_animation(path, oox, ooy, sx, sy, syaw0, syaw1, gx, gy, gyaw0, gyaw1)
 
     println(PROGRAM_FILE," Done!!")
 end
 
 
-function show_animation(paths, oox, ooy, sx, sy, syaw0, syaw1, gx, gy, gyaw0, gyaw1)
+function show_animation(path, oox, ooy, sx, sy, syaw0, syaw1, gx, gy, gyaw0, gyaw1)
     plot(oox, ooy, ".k")
     trailer_hybrid_a_star.trailerlib.plot_trailer(sx, sy, syaw0, syaw1, 0.0)
     trailer_hybrid_a_star.trailerlib.plot_trailer(gx, gy, gyaw0, gyaw1, 0.0)
-    for i in 1:length(paths)
-        x = paths[i].x
-        y = paths[i].y
-        yaw = paths[i].yaw
-        yaw1 = paths[i].yaw1
-        direction = paths[i].direction
+    x = path.x
+    y = path.y
+    yaw = path.yaw
+    yaw1 = path.yaw1
+    direction = path.direction
 
-        steer = 0.0
-        for ii in 1:length(x)
-            cla()
-            plot(oox, ooy, ".k")
-            plot(x, y, "-r", label="Hybrid A* path")
+    steer = 0.0
+    for ii in 1:length(x)
+        cla()
+        plot(oox, ooy, ".k")
+        plot(x, y, "-r", label="Hybrid A* path")
 
-            if ii < length(x)-1
-                k = (yaw[ii+1] - yaw[ii])/trailer_hybrid_a_star.MOTION_RESOLUTION
-                if !direction[ii]
-                    k *= -1
-                end
-                steer = atan2(trailer_hybrid_a_star.WB*k, 1.0)
-            else
-                steer = 0.0
+        if ii < length(x)-1
+            k = (yaw[ii+1] - yaw[ii])/trailer_hybrid_a_star.MOTION_RESOLUTION
+            if !direction[ii]
+                k *= -1
             end
-            trailer_hybrid_a_star.trailerlib.plot_trailer.(x[ii], y[ii], yaw[ii], yaw1[ii], steer)
-            grid(true)
-            axis("equal")
-            pause(0.0001)
+            steer = atan2(trailer_hybrid_a_star.WB*k, 1.0)
+        else
+            steer = 0.0
         end
+        trailer_hybrid_a_star.trailerlib.plot_trailer.(x[ii], y[ii], yaw[ii], yaw1[ii], steer)
+        grid(true)
+        axis("equal")
+        pause(0.0001)
     end
 end
 
