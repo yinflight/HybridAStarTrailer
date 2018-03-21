@@ -51,7 +51,7 @@ It can generate a feasible path from differenct start states.
 
 2. Clone this repo.
 
-3. Run the script like: julia main.jl
+3. Run the script like: julia perpendicular_parking.jl or julia parallel_parking.jl
 
 4. Add star to this repo if you like it :smiley:. 
 
