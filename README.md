@@ -22,19 +22,11 @@ This planner can generate a feasible path from differenct start states.
 
 ![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking1.gif)
 
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking2.gif)
-
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking3.gif)
-
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking4.gif)
-
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking5.gif)
-
 ![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking6.gif)
 
 ![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking7.gif)
 
-## Perpendicular parking 
+## Parallel parking 
 
 ![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/parallel_parking1.gif)
 
