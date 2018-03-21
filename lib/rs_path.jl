@@ -9,6 +9,7 @@ module rs_path
 using PyPlot
 
 const STEP_SIZE = 0.1
+const MAX_PATH_LENGTH = 1000.0
 
 type Path
     lengths::Array{Float64} #lengths of each part of the path +: forward, -: backward
@@ -197,6 +198,10 @@ function set_path(paths::Array{Path}, lengths::Array{Float64}, ctypes::Array{Str
     end
 
     path.L = sum([abs(i) for i in lengths])
+
+    if path.L >= MAX_PATH_LENGTH
+        return paths # not insert path
+    end
 
     Base.Test.@test path.L >= 0.01
 
@@ -601,6 +606,9 @@ function generate_local_course(L::Float64,
                                maxc::Float64,
                                step_size::Float64)
     npoint = trunc(Int64, L/step_size) + length(lengths)+3
+    # println(npoint)
+    # println(L)
+    # println(length(lengths))
 
     px = fill(0.0, npoint)
     py = fill(0.0, npoint)

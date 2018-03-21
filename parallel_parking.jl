@@ -12,16 +12,16 @@ function main()
     println(PROGRAM_FILE," start!!")
 
     # initial state
-    sx = 14.0  # [m]
-    sy = 10.0  # [m]
-    syaw0 = deg2rad(00.0)
-    syaw1 = deg2rad(00.0)
+    sx = -15.0  # [m]
+    sy = 8.0  # [m]
+    syaw0 = deg2rad(180.0)
+    syaw1 = deg2rad(180.0)
 
     # goal state
-    gx = 0.0  # [m]
-    gy = 0.0  # [m]
-    gyaw0 = deg2rad(90.0)
-    gyaw1 = deg2rad(90.0)
+    gx = 1.0  # [m]
+    gy = 3.0  # [m]
+    gyaw0 = deg2rad(0.0)
+    gyaw1 = deg2rad(0.0)
 
     # set obstacles
     ox = Float64[]
@@ -31,29 +31,32 @@ function main()
         push!(ox, Float64(i))
         push!(oy, 15.0)
     end
-    for i in -25:-4
+    for i in -10:10
         push!(ox, Float64(i))
-        push!(oy, 4.0)
+        push!(oy, 0.0)
     end
-    for i in -15:4
-        push!(ox, -4.0)
+    for i in -25:-10
+        push!(ox, Float64(i))
+        push!(oy, 5.0)
+    end
+    for i in 10:25
+        push!(ox, Float64(i))
+        push!(oy, 5.0)
+    end
+    for i in 0:5
+        push!(ox, 10.0)
         push!(oy, Float64(i))
     end
-    for i in -15:4
-        push!(ox, 4.0)
+    for i in 0:5
+        push!(ox, -10.0)
         push!(oy, Float64(i))
     end
-    for i in 4:25
-        push!(ox, Float64(i))
-        push!(oy, 4.0)
-    end
-    for i in -4:4
-        push!(ox, Float64(i))
-        push!(oy, -15.0)
-    end
-
+ 
     oox = ox[:]
     ooy = oy[:]
+    # plot(oox, ooy, ".k")
+    # axis("equal")
+    # show()
 
     # path generation
     @time path = trailer_hybrid_a_star.calc_hybrid_astar_path(sx, sy, syaw0, syaw1, gx, gy, gyaw0, gyaw1, ox, oy,
@@ -93,11 +96,14 @@ function show_animation(path, oox, ooy, sx, sy, syaw0, syaw1, gx, gy, gyaw0, gya
         else
             steer = 0.0
         end
+
         trailer_hybrid_a_star.trailerlib.plot_trailer.(x[ii], y[ii], yaw[ii], yaw1[ii], steer)
         grid(true)
         axis("equal")
         pause(0.0001)
+
     end
+
 end
 
 

@@ -16,21 +16,31 @@ I want to achieve this on autonomous vehicle (click the image to see movie).
 
 These are simulation results for autonomous parking in a narrow space.
 
-It can generate a feasible path from differenct start states.
+This planner can generate a feasible path from differenct start states.
 
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation1.gif)
+## Perpendicular parking 
 
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation2.gif)
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking1.gif)
 
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation3.gif)
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking2.gif)
 
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation4.gif)
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking3.gif)
 
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation5.gif)
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking4.gif)
 
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation6.gif)
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking5.gif)
 
-![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/animation7.gif)
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking6.gif)
+
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/perpendicular_parking7.gif)
+
+## Perpendicular parking 
+
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/parallel_parking1.gif)
+
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/parallel_parking2.gif)
+
+![2](https://github.com/AtsushiSakai/HybridAStarTrailer/raw/master/movie/gif/parallel_parking3.gif)
 
 
 # Requirements
