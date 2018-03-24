@@ -16,7 +16,7 @@ I want to achieve this on autonomous vehicle (click the image to see movie).
 
 These are simulation results for autonomous parking in a narrow space.
 
-This planner can generate a feasible path from differenct start states.
+This planner can generate a feasible path from diffent start states.
 
 ## Perpendicular parking 
 
