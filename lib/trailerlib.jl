@@ -85,7 +85,7 @@ function rect_check(ix::Float64, iy::Float64, iyaw::Float64,
             y2 = vry[i+1] - ly
             d1 = hypot(x1,y1)
             d2 = hypot(x2,y2)
-            theta1 = atan2(y1,x1)
+            theta1 = atan(y1,x1)
             tty = (-sin(theta1)*x2 + cos(theta1)*y2)
             tmp = (x1*x2+y1*y2)/(d1*d2)
 
@@ -163,7 +163,7 @@ function check_trailer_collision(
     """
 
     if kdtree == nothing
-        kdtree = KDTree(hcat(ox, oy)')
+		kdtree = KDTree([ox'; oy'])
     end
 
     vrxt = [LTF, LTF, -LTB, -LTB, LTF]
@@ -236,13 +236,13 @@ function plot_trailer(x::Float64,
 
     fr_wheel = (fr_wheel' * Rot2)'
     fl_wheel = (fl_wheel' * Rot2)'
-    fr_wheel[1,:] += WB
-    fl_wheel[1,:] += WB
+    fr_wheel[1,:] .+= WB
+    fl_wheel[1,:] .+= WB
     fr_wheel = (fr_wheel' * Rot1)'
     fl_wheel = (fl_wheel' * Rot1)'
 
-    tr_wheel[1,:] -= LT
-    tl_wheel[1,:] -= LT
+    tr_wheel[1,:] .-= LT
+    tl_wheel[1,:] .-= LT
     tr_wheel = (tr_wheel' * Rot3)'
     tl_wheel = (tl_wheel' * Rot3)'
 
@@ -251,23 +251,23 @@ function plot_trailer(x::Float64,
     rr_wheel = (rr_wheel' * Rot1)'
     rl_wheel = (rl_wheel' * Rot1)'
 
-    truckOutLine[1, :] += x
-    truckOutLine[2, :] += y
-    trailerOutLine[1, :] += x
-    trailerOutLine[2, :] += y
-    fr_wheel[1, :] += x
-    fr_wheel[2, :] += y
-    rr_wheel[1, :] += x
-    rr_wheel[2, :] += y
-    fl_wheel[1, :] += x
-    fl_wheel[2, :] += y
-    rl_wheel[1, :] += x
-    rl_wheel[2, :] += y
+    truckOutLine[1, :] .+= x
+    truckOutLine[2, :] .+= y
+    trailerOutLine[1, :] .+= x
+    trailerOutLine[2, :] .+= y
+    fr_wheel[1, :] .+= x
+    fr_wheel[2, :] .+= y
+    rr_wheel[1, :] .+= x
+    rr_wheel[2, :] .+= y
+    fl_wheel[1, :] .+= x
+    fl_wheel[2, :] .+= y
+    rl_wheel[1, :] .+= x
+    rl_wheel[2, :] .+= y
 
-    tr_wheel[1, :] += x
-    tr_wheel[2, :] += y
-    tl_wheel[1, :] += x
-    tl_wheel[2, :] += y
+    tr_wheel[1, :] .+= x
+    tr_wheel[2, :] .+= y
+    tl_wheel[1, :] .+= x
+    tl_wheel[2, :] .+= y
 
     plot(truckOutLine[1, :], truckOutLine[2, :], truckcolor)
     plot(trailerOutLine[1, :], trailerOutLine[2, :], truckcolor)
@@ -304,7 +304,7 @@ end
  
 
 if length(PROGRAM_FILE)!=0 &&
-    contains(@__FILE__, PROGRAM_FILE)
+	occursin(PROGRAM_FILE, @__FILE__)
     @time main()
 end
 

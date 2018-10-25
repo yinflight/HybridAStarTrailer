@@ -4,6 +4,8 @@
 # author: Atsushi Sakai
 #
 
+using Test
+
 include("./lib/trailer_hybrid_a_star.jl")
 
 function test()
@@ -58,7 +60,7 @@ function test()
 
 
 
-    Base.Test.@test length(path.x)>=1
+    @test length(path.x)>=1
 
     sx = 14.0  # [m]
     sy = 10.0  # [m]
@@ -71,7 +73,7 @@ function test()
 
 
 
-    Base.Test.@test length(path.x)>=1
+    @test length(path.x)>=1
 
     sx = -14.0  # [m]
     sy = 12.0  # [m]
@@ -83,7 +85,7 @@ function test()
 
 
 
-    Base.Test.@test length(path.x)>=1
+    @test length(path.x)>=1
 
     sx = -20.0  # [m]
     sy = 6.0  # [m]
@@ -95,7 +97,7 @@ function test()
 
 
 
-    Base.Test.@test length(path.x)>=1
+    @test length(path.x)>=1
 
     sx = -14.0  # [m]
     sy = 12.0  # [m]
@@ -107,7 +109,7 @@ function test()
 
 
 
-    Base.Test.@test length(path.x)>=1
+    @test length(path.x)>=1
 
     sx = -20.0  # [m]
     sy = 6.0  # [m]
@@ -120,7 +122,7 @@ function test()
 
 
 
-    Base.Test.@test length(path.x)>=1
+    @test length(path.x)>=1
 
     sx = -20.0  # [m]
     sy = 12.0  # [m]
@@ -133,9 +135,7 @@ function test()
                                                                )
 
 
-
-
-    Base.Test.@test length(path.x)>=1
+    @test length(path.x)>=1
 
     println("Test Done !!!")
 

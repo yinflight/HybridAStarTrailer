@@ -92,7 +92,7 @@ function show_animation(path, oox, ooy, sx, sy, syaw0, syaw1, gx, gy, gyaw0, gya
             if !direction[ii]
                 k *= -1
             end
-            steer = atan2(trailer_hybrid_a_star.WB*k, 1.0)
+            steer = atan(trailer_hybrid_a_star.WB*k, 1.0)
         else
             steer = 0.0
         end
@@ -108,7 +108,7 @@ end
 
 
 if length(PROGRAM_FILE)!=0 &&
-    contains(@__FILE__, PROGRAM_FILE)
+	occursin(PROGRAM_FILE, @__FILE__)
     main()
 end
 

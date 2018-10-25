@@ -11,7 +11,7 @@ using NearestNeighbors
 using DataStructures 
 
 
-type Node
+mutable struct Node
     x::Int64 #x index
     y::Int64 #y index
     cost::Float64 # cost
@@ -240,7 +240,7 @@ function calc_obstacle_map(ox::Array{Float64}, oy::Array{Float64}, reso::Float64
 
     obmap = fill(false, (xwidth,ywidth))
 
-    kdtree = KDTree(hcat(ox, oy)')
+    kdtree = KDTree([ox'; oy'])
     for ix in 1:xwidth 
         x = ix + minx
         for iy in 1:ywidth 
@@ -348,8 +348,8 @@ function main()
         push!(oy, 60.0-Float64(i))
     end
 
-    const VEHICLE_RADIUS = 5.0 #[m]
-    const GRID_RESOLUTION = 1.0 #[m]
+    VEHICLE_RADIUS = 5.0 #[m]
+    GRID_RESOLUTION = 1.0 #[m]
 
     @time rx, ry = calc_astar_path(sx, sy, gx, gy, ox, oy, GRID_RESOLUTION, VEHICLE_RADIUS)
 
@@ -367,8 +367,7 @@ end
 
 
 if length(PROGRAM_FILE)!=0 &&
-    contains(@__FILE__, PROGRAM_FILE)
- 
+	occursin(PROGRAM_FILE, @__FILE__)
     main()
 end
 

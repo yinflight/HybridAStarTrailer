@@ -96,9 +96,9 @@ function calc_hybrid_astar_path(sx::Float64, sy::Float64, syaw::Float64, syaw1::
     syaw, gyaw = rs_path.pi_2_pi(syaw), rs_path.pi_2_pi(gyaw)
     ox, oy = ox[:], oy[:]
 
-    kdtree = KDTree(hcat(ox, oy)')
+	kdtree = KDTree([ox'; oy'])
 
-    const c = calc_config(ox, oy, xyreso, yawreso)
+    c = calc_config(ox, oy, xyreso, yawreso)
     nstart = Node(round(Int64,sx/xyreso), round(Int64,sy/xyreso), round(Int64, syaw/yawreso),true,[sx],[sy],[syaw],[syaw1],[true],0.0,0.0, -1)
     ngoal = Node(round(Int64,gx/xyreso), round(Int64,gy/xyreso), round(Int64,gyaw/yawreso),true,[gx],[gy],[gyaw],[gyaw1],[true],0.0,0.0, -1)
 
@@ -575,7 +575,7 @@ function main()
             if !direction[ii]
                 k *= -1
             end
-            steer = atan2(WB*k, 1.0)
+            steer = atan(WB*k, 1.0)
         else
             steer = 0.0
         end

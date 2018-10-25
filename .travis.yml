@@ -3,17 +3,17 @@ os:
   - osx
 
 julia:
-  - 0.6.0
+  - 1.0.0
 
 install:
-  - julia -e 'Pkg.add("Conda")'
+  - julia -e 'using Pkg;Pkg.add("Conda")'
   - julia -e 'using Conda;Conda.add("matplotlib==2.0.1")'
-  - julia -e 'Pkg.add("PyCall")'
+  - julia -e 'using Pkg;Pkg.add("PyCall")'
   - julia -e 'ENV["PYTHON"]="";Pkg.build("PyCall")'
-  - julia -e 'Pkg.add("PyPlot")'
-  - julia -e 'Pkg.add("DataFrames")'
-  - julia -e 'Pkg.add("NearestNeighbors")'
-  - julia -e 'Pkg.add("DataStructures")'
+  - julia -e 'using Pkg;Pkg.add("PyPlot")'
+  - julia -e 'using Pkg;Pkg.add("DataFrames")'
+  - julia -e 'using Pkg;Pkg.add("NearestNeighbors")'
+  - julia -e 'using Pkg;Pkg.add("DataStructures")'
 
 script:
-  - julia ./test.jl
+  - julia ./runtest.jl
