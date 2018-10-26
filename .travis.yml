@@ -16,4 +16,4 @@ install:
   - julia -e 'using Pkg;Pkg.add("DataStructures")'
 
 script:
-  - julia ./runtest.jl
+  - julia ./runtests.jl
