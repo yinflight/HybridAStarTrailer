@@ -1,6 +1,9 @@
 language: julia
-os:
-  - osx
+
+matrix:
+  include:
+    - os: linux
+    - os: osx
 
 julia:
   - 1.0.0
