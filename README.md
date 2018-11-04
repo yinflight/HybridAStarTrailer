@@ -1,6 +1,7 @@
 # Hybrid AStar Trailer
 
 [![Build Status](https://travis-ci.org/AtsushiSakai/HybridAStarTrailer.svg?branch=master)](https://travis-ci.org/AtsushiSakai/HybridAStarTrailer)
+[![Build status](https://ci.appveyor.com/api/projects/status/1vlcih2j40h4royc?svg=true)](https://ci.appveyor.com/project/AtsushiSakai/hybridastartrailer)
 
 A path planning algorithm based on Hybrid A\* for trailer truck.
 

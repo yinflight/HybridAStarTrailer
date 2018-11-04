@@ -9,14 +9,15 @@ julia:
   - 1.0.0
 
 install:
-  - julia -e 'using Pkg;Pkg.add("Conda")'
-  - julia -e 'using Conda;Conda.add("matplotlib==2.0.1")'
-  - julia -e 'using Pkg;Pkg.add("PyCall")'
-  - julia -e 'using Pkg;ENV["PYTHON"]="";Pkg.build("PyCall")'
-  - julia -e 'using Pkg;Pkg.add("PyPlot")'
-  - julia -e 'using Pkg;Pkg.add("DataFrames")'
-  - julia -e 'using Pkg;Pkg.add("NearestNeighbors")'
-  - julia -e 'using Pkg;Pkg.add("DataStructures")'
+  - julia ./build.jl
+  #- julia -e 'using Pkg;Pkg.add("Conda")'
+  #- julia -e 'using Conda;Conda.add("matplotlib==2.0.1")'
+  #- julia -e 'using Pkg;Pkg.add("PyCall")'
+  #- julia -e 'using Pkg;ENV["PYTHON"]="";Pkg.build("PyCall")'
+  #- julia -e 'using Pkg;Pkg.add("PyPlot")'
+  #- julia -e 'using Pkg;Pkg.add("DataFrames")'
+  #- julia -e 'using Pkg;Pkg.add("NearestNeighbors")'
+  #- julia -e 'using Pkg;Pkg.add("DataStructures")'
 
 script:
   - julia ./runtests.jl
