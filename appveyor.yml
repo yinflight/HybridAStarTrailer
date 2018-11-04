@@ -9,7 +9,7 @@ install:
   - ps: iex ((new-object net.webclient).DownloadString("https://raw.githubusercontent.com/JuliaCI/Appveyor.jl/version-1/bin/install.ps1"))
 
 build_script:
-  - C:\julia\bin\julia -e "using Pkg;Pkg.add('Conda')"
+  - C:\julia\bin\julia -e "using Pkg;Pkg.add("Conda")"
   - C:\julia\bin\julia -e "using Conda;Conda.add('matplotlib==2.0.1')"
   - C:\julia\bin\julia -e "using Pkg;Pkg.add('PyCall')"
   - C:\julia\bin\julia -e "using Pkg;ENV['PYTHON']="";Pkg.build('PyCall')"
