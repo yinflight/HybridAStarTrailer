@@ -18,7 +18,7 @@ build_script:
   - C:\julia\bin\julia -e "using Pkg;Pkg.add('NearestNeighbors')"
   - C:\julia\bin\julia -e "using Pkg;Pkg.add('DataStructures')"
 
-build: off
+#build: off
 
 test_script:
   - C:\julia\bin\julia ./runtests.jl
