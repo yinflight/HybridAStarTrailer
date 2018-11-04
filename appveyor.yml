@@ -6,16 +6,17 @@ platform:
   - x64 # 64-bit
 
 install:
-  - julia -e 'using Pkg;Pkg.add("Conda")'
-  - julia -e 'using Conda;Conda.add("matplotlib==2.0.1")'
-  - julia -e 'using Pkg;Pkg.add("PyCall")'
-  - julia -e 'using Pkg;ENV["PYTHON"]="";Pkg.build("PyCall")'
-  - julia -e 'using Pkg;Pkg.add("PyPlot")'
-  - julia -e 'using Pkg;Pkg.add("DataFrames")'
-  - julia -e 'using Pkg;Pkg.add("NearestNeighbors")'
-  - julia -e 'using Pkg;Pkg.add("DataStructures")'
+  - ps: iex ((new-object net.webclient).DownloadString("https://raw.githubusercontent.com/JuliaCI/Appveyor.jl/version-1/bin/install.ps1"))
+  - C:\julia\bin\julia -e 'using Pkg;Pkg.add("Conda")'
+  - C:\julia\bin\julia -e 'using Conda;Conda.add("matplotlib==2.0.1")'
+  - C:\julia\bin\julia -e 'using Pkg;Pkg.add("PyCall")'
+  - C:\julia\bin\julia -e 'using Pkg;ENV["PYTHON"]="";Pkg.build("PyCall")'
+  - C:\julia\bin\julia -e 'using Pkg;Pkg.add("PyPlot")'
+  - C:\julia\bin\julia -e 'using Pkg;Pkg.add("DataFrames")'
+  - C:\julia\bin\julia -e 'using Pkg;Pkg.add("NearestNeighbors")'
+  - C:\julia\bin\julia -e 'using Pkg;Pkg.add("DataStructures")'
 
 build: off
 
 test_script:
-  - julia ./runtests.jl
+  - C:\julia\bin\julia ./runtests.jl
