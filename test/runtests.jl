@@ -6,7 +6,7 @@
 
 using Test
 
-include("./lib/trailer_hybrid_a_star.jl")
+include("../lib/trailer_hybrid_a_star.jl")
 
 function test()
     println("Test Start !!!")

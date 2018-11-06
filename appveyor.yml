@@ -10,8 +10,11 @@ install:
 
 build_script:
   - echo "%JL_BUILD_SCRIPT%"
-  - C:\julia\bin\julia ./build.jl
+  #- C:\julia\bin\julia ./build.jl
+  - C:\julia\bin\julia "%JL_BUILD_SCRIPT%"
 
 test_script:
   - echo "%JL_TEST_SCRIPT%"
-  - C:\julia\bin\julia ./runtests.jl
+  #- C:\julia\bin\julia ./runtests.jl
+  - C:\julia\bin\julia "%JL_TEST_SCRIPT%"
+
