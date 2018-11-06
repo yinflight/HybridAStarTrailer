@@ -4,6 +4,8 @@
 # author: Atsushi Sakai
 #
 
+module PkgTests
+
 using Test
 
 include("../lib/trailer_hybrid_a_star.jl")
@@ -141,6 +143,7 @@ function test()
 
 end
 
-
 @time test()
+
+end
 
