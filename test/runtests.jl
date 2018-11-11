@@ -8,7 +8,7 @@ module PkgTests
 
 using Test
 
-include("../lib/trailer_hybrid_a_star.jl")
+include("../src/lib/trailer_hybrid_a_star.jl")
 
 function test()
     println("Test Start !!!")
