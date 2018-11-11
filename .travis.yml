@@ -21,5 +21,6 @@ script:
   - julia --code-coverage test/runtests.jl
 
 after_success:
+  # for coveralls
   - julia -e 'using Coverage; Coveralls.submit(process_folder())'
 
