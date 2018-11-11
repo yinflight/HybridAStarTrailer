@@ -1,8 +1,9 @@
 #
-# 
+# Build script 
 #
 # author: Atsushi Sakai
 #
+println("build")
 
 using Pkg
 Pkg.add("PyPlot")
