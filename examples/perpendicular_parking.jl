@@ -6,7 +6,7 @@
 
 using PyPlot
 
-include("./lib/trailer_hybrid_a_star.jl")
+include("../src/trailer_hybrid_a_star.jl")
 
 function main()
     println(PROGRAM_FILE," start!!")

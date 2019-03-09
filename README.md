@@ -39,7 +39,7 @@ This planner can generate a feasible path from diffent start states.
 
 # Requirements
 
-- [Julia 1.0.0](https://julialang.org/downloads/)
+- [Julia 1.1.0](https://julialang.org/downloads/)
 
 - [PyPlot](https://github.com/JuliaPy/PyPlot.jl)
 
