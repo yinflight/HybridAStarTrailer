@@ -91,6 +91,10 @@ This algorithm has 3 novelies for traier parking.
 
 3. Two rectangle (truck and trailer) collision check.
 
+# Other materials
+
+- [トレーラトラックの自動駐車計画アルゴリズムの紹介@ROS Japan UG #24 勉強会](https://docs.google.com/presentation/d/13tuWC_POpDRrIvYQc34wHeW895TP9278VQiRmRluus4/edit?usp=sharing) (in Japanease)
+
 
 # License 
 
